@@ -194,7 +194,7 @@ s {
     filter: invert(1);
 }
 .navbar-links > img {
-    padding: 5px;
+    padding: clamp(2px, 0.7vw, 5px);
     width: 31px;
     height: 31px;
 }
@@ -210,8 +210,8 @@ s {
 .third-level-menu {
     position: absolute;
     top: 0;
-    right: -150px;
-    width: 150px;
+    right: calc(clamp(50px, 20vw, 150px) * -1);
+    width: clamp(50px, 20vw, 150px);
     list-style: none;
     padding: 0;
     margin: 0;
@@ -229,7 +229,7 @@ s {
     position: absolute;
     top: 33px;
     left: 0;
-    width: 150px;
+    width: clamp(50px, 20vw, 150px);
     list-style: none;
     padding: 0;
     margin: 0;
@@ -322,12 +322,11 @@ s {
     width: 100%;
 }
 .top-images-container {
-    height: clamp(0px, 42.667vw, 500px);
     overflow: hidden;
     position: relative;
 }
 .top-images-container > img {
-    height: 100%;
+    width: clamp(0px, 42.667vw, 500px);
     margin-left: 100%;
 }
 .top-images-container > img:first-child {
@@ -610,7 +609,7 @@ s {
     background-color: white;
 }
 .c p {
-    font-size: 12.5px;
+    font-size: clamp(10px, 1.3vw, 12.5px);
 }
 .main-advs {
     width: 100%;
@@ -940,10 +939,16 @@ s {
     height: 35%;
 }
 .section-of-second-footer > div {
-    height: 65%;
+    width: 100%;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+}
+.section-of-second-footer:first-child > div > img {
+    width: 50%;
+}
+.section-of-second-footer:not(:last-child) > div {
+    gap: 0.77vw;
 }
 .social-icon {
     width: 25px;
@@ -1235,7 +1240,7 @@ s {
         display: grid;
         -ms-grid-columns: auto auto auto;
         grid-template-columns: auto auto auto;
-        row-gap: 20px;
+        gap: 20px;
     }
     .footer-delimeter:nth-of-type(4) {
         display: none;
@@ -1247,15 +1252,15 @@ s {
         margin-top: 0px;
     }
     .logo img {
-        width: 30px;
-        height: 30px;
+        width: 28px;
+        height: 28px;
     }
     .logo h1 {
-        font-size: 18px;
+        font-size: 14.5px;
     }
     .contact-us {
-        padding: 5px;
-        font-size: 9px;
+        padding: 3.5px;
+        font-size: 7px;
     }
     .navbar-links img {
         width: 13px;
@@ -1269,11 +1274,11 @@ s {
         height: 18px;
     }
     .top-level-menu a {
-        padding: 7px;
-        font-size: 9px;
+        padding: 5px;
+        font-size: 7px;
     }
     .navbar-links p {
-        font-size: 9px;
+        font-size: 7px;
     }
     .top-description {
         width: 88.667vw;
@@ -1297,7 +1302,7 @@ s {
         display: none;
     }
     .navbar-links > *:not(:last-child) {
-        margin-right: 11px;
+        margin-right: 1.1vw;
     }
     .top-img-and-descr {
         display: -webkit-box;
@@ -1312,8 +1317,8 @@ s {
         height: 70px;
     }
     .search {
-        padding-left: 30px;
-        padding-right: 50px;
+        padding-left: 18px;
+        padding-right: 40px;
     }
     .search input {
         height: 30px;
@@ -1335,12 +1340,12 @@ s {
         font-size: 9px;
     }
     .c {
-        padding-top: 30px;
+        padding-top: 28px;
         padding-left: 20px;
-        padding-right: 45px;
+        padding-right: 35px;
     }
     .c p {
-        font-size: 9px;
+        font-size: 8px;
     }
     .products-section-products {
         -ms-grid-columns: 48% 48%;
@@ -1353,7 +1358,24 @@ s {
         top: 20px;
     }
     .navbar-links > img {
-        width: 24px;
-        height: 24px;
+        width: 22px;
+        height: 22px;
+    }
+    .app-link-text > p:nth-child(2) {
+        font-size: 7px;
+    }
+    .app-link img {
+        width: 17px;
+        height: 17px;
+    }
+    .section-of-second-footer:last-child h1 {
+        font-size: 14px;
+    }
+    .section-of-second-footer:last-child img {
+        height: 20px;
+        width: 30px;
+    }
+    .section-of-second-footer:last-child p {
+        font-size: 7.5px;
     }
 }
